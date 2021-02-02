@@ -1,0 +1,32 @@
+/*=== POSITION ===*/
+
+#initial,
+#main,
+.unseen,
+__                     {position:absolute}
+
+
+#article_slider,
+__                     {position:sticky}
+
+
+.svg_logo,
+#article,
+__                     {position:relative}
+
+
+
+/*=== TOP ===*/
+
+#initial,
+#article_slider,
+__                     {top:0}
+
+
+/*=== LEFT ===*/
+
+
+/*=== BOTTOM ===*/
+
+
+/*=== RIGHT ===*/

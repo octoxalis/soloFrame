@@ -1,0 +1,73 @@
+/*=== DIMENSIONS ===*/
+
+:root
+                       {--LINE_WIDTH:clamp( 30ch, {{C_o.LINE_WIDTH_n}}ch, {{C_o.BODY_WIDTH_n - 4}}vw )}
+
+#svg_logo,
+__                     {--svg_icon_dim:calc( {{C_o.LOGO_HEIGHT}} * .8 )}
+
+
+
+/*=== WIDTH ===*/
+
+.retract,
+__                     {width:0}
+
+.unseen,
+__                     {width:1px}
+
+
+#background_aside,
+#initial,
+#article_slider,
+__                     {width:{{C_o.FULL_WIDTH}}}
+
+
+#article,
+__                     {width:100%}
+
+/*
+#initial .svg_logo,
+__                     {width:100%}
+*/
+
+#background_aside .svg_logo,
+__                     {width:18%}
+
+.svg_icon,
+__                     {width:var(--svg_icon_dim)}
+
+*,
+__                     {scrollbar-width:thin}
+
+
+
+/*=== HEIGHT ===*/
+
+.retract,
+__                     {height:0}
+
+#article::after,
+.unseen,
+__                     {height:1px}
+
+
+#initial,
+__                     {height:{{C_o.FULL_HEIGHT}}}
+
+
+#initial_hero li,
+__                     {height:50vh}
+
+
+
+#article_slider,
+__                     {height:{{C_o.SLIDER_HEIGHT}}}
+
+
+.svg_icon,
+__                     {height:var(--svg_icon_dim)}
+
+
+
+/*=== FLEX-BASIS ===*/

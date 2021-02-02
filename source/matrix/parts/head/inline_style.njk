@@ -1,0 +1,14 @@
+{% set _path = '../../assets/styles/css/parts/' %}
+<style data-id="{{ C_o.INLINE_s }}">
+{% set _css %}
+{% include _path + "color.css" %}
+{% include _path + "tags.css" %}
+{% include _path + "section.css" %}
+{% include _path + "header.css" %}
+{% include _path + "article.css" %}
+{% include _path + "notes.css" %}
+{% include _path + "footer.css" %}
+{% endset %}
+
+{% include "assets/styles/css/minify.njk" %}
+</style>

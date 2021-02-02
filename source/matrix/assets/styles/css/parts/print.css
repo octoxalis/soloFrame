@@ -1,0 +1,35 @@
+/* ------- Print ------- */
+
+@media print {
+  
+  nav, .lightbox:target:after { display: none; }
+  
+  article, figure, img {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Inline footnotes */
+  
+  label + input + small { display: inline; }
+  label + input + small:before { content: "["; }
+  label + input + small:after { content: "]"; }
+  
+  /* Slides */
+  
+  .slides, .slides figure {
+    position: relative;
+    height: auto;
+    padding: 0;
+  }
+
+  .slides figure img, .slides figure.cover img {
+    max-height: auto;
+    position: relative;
+    z-index: 1;
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+  }
+    
+}

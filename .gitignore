@@ -1,0 +1,6 @@
+node_modules
+soloFrame.code-workspace
+_workspace_
+_perf.js
+pnpm-lock.yaml
+env

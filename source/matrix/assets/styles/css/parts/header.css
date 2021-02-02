@@ -1,0 +1,39 @@
+/* ------- Header ------- */
+
+header {
+  padding: 2vw 2vw 0 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background: var(--bgcolor);
+  line-height: 1;
+}
+
+header h1 {
+  font-size: 1em;
+  flex: 1; /* pushes nav to the right */
+  white-space: nowrap;
+  padding: 0 5vw .5em 0;
+}
+
+header a {
+  filter: brightness(8);
+}
+
+header h1 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+
+nav a:not(:last-of-type) {
+  margin-right: 4vw;
+}
+
+/* ------- Smaller screens ------- */
+
+@media only screen and (max-width: 540px) {
+  nav { width: 100%; } /* Fix for older webkit versions */
+}

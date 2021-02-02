@@ -1,0 +1,18 @@
+/* ------- article ------- */
+
+article + article {
+  margin-top: 4.5em;
+}
+
+article h2 {
+  font-weight: 700;
+  margin: 0 0 1em 0;
+}
+
+article time {
+  margin-left: .6em;
+  font-size: .8em;
+  font-weight: 400;
+  opacity: .7;
+}
+

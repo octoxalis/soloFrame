@@ -1,0 +1,97 @@
+/*=== CODE ===*/
+:root
+{
+  --c_code_bg: var(--c_hue_p) var(--c_sat_lo_2) {{C_o.LUM_BACK_s}};
+  --line_border_n: 3px;
+}
+
+div[data-id="code_ref"],
+__                     {display:grid;place-items:center}
+
+code[data-id],
+__                     {display:block}
+code[data-id] li::marker,
+__                     {display:inline-block;-webkit-select: none}
+
+code[data-id] > ol,
+dl[data-id="code_ref"],
+__                     {display:flex}
+
+code[data-id] > ol,
+__                     {flex-direction: column}
+
+code[data-id],
+dl[data-id="code_ref"],
+__                     {position:relative}
+
+code[data-id],
+__                     {left:50%;right:50%}/* !!!! full width */
+
+code[data-id],
+__                     {margin:0}
+
+pre[data-id="code"],
+__                     {margin: 0 0 {{C_o.PAD_16}} 0}
+
+code[data-id],
+__                     {padding-left:1rem}
+
+code[data-id],
+dl[data-id="code_ref"],
+__                     {margin-left:-{{C_o.HALF_WIDTH}};margin-right:-{{C_o.HALF_WIDTH}}}    /* !!!! full width but keep margins for scaling */
+
+code[data-id],
+dl[data-id="code_ref"],
+__                     {padding:{{C_o.PAD_2}} {{C_o.PAD_8}}}
+
+code[data-id],
+code[data-id] ol,
+dl[data-id="code_ref"],
+ol[class="i_code"],
+__                     {width:100vw}  /* !!!! full width */
+
+dl[data-id="code_ref"] > dt,
+__                     {flex-basis:95%}
+
+code[data-id] li,
+__                     {border-bottom: var(--line_border_n) solid transparent}
+code[data-id] li.i_spot,
+__                     {border-bottom: var(--line_border_n) solid var(--c_ilite_marker)}
+
+.i_uv_hi,
+__                     {outline: var(--line_border_n) solid var(--c_ilite_marker)}
+
+code[data-id] li::marker,
+__                     {color: var(--c_ilite_marker)}
+
+dl[data-id="code_ref"],
+__                     {background: hsla(var(--c_code_bg)/.4)}
+code[data-id],
+__                     {background: hsla(var(--c_code_bg)/1);filter: brightness(2)}
+code[data-id] li:hover,
+__                     {background: hsla(var(--c_code_bg)/.9)}
+
+code[data-id],
+code[data-id] *,
+__                     {font-family:var(--font_mono)}
+
+code[data-id] li::marker,
+__                     {font-size:65%}        /* 4 digits wide */
+
+[class^="i_"],
+__                     {font-style:normal}
+
+.i_spot:hover,
+__                     {cursor:pointer}
+
+code[data-id] li:hover,
+__                     {filter: contrast(2)}
+.i_uv_hi,
+__                     {filter: saturate(8)}
+
+.i_uv_hi,
+__                     {animation: blink 3s infinite}
+
+@keyframes blink       {0%   { opacity:0}
+                        20%  { opacity:1} 
+                        100% { opacity:1}}

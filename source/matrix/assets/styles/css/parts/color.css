@@ -1,0 +1,43 @@
+/* Color scheme */
+
+* {
+/* === LUM === */
+
+--lum_mode:{{C_o.LUM_MODE_n}};
+--lum_contrast:45;
+
+--c_lum_hi_4:calc(({{C_o.LUM_BASE_n}} + ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * 1.0 ) ) * 1%); /* 40/40:90% */
+--c_lum_hi_3:calc(({{C_o.LUM_BASE_n}} + ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .75 ) ) * 1%); /* 30/40:80% */
+--c_lum_hi_2:calc(({{C_o.LUM_BASE_n}} + ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .50 ) ) * 1%); /* 20/40:70% */
+--c_lum_hi_1:calc(({{C_o.LUM_BASE_n}} + ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .25 ) ) * 1%); /* 10/40:60% */
+--c_lum_ne :calc(({{C_o.LUM_BASE_n}} +  0 ) * 1%);                                                    /* 50% */
+--c_lum_lo_1:calc(({{C_o.LUM_BASE_n}} - ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .25 ) ) * 1%); /* 10/40:40% */
+--c_lum_lo_2:calc(({{C_o.LUM_BASE_n}} - ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .50 ) ) * 1%); /* 20/40:30% */
+--c_lum_lo_3:calc(({{C_o.LUM_BASE_n}} - ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * .75 ) ) * 1%); /* 30/40:20% */
+--c_lum_lo_4:calc(({{C_o.LUM_BASE_n}} - ( var(--lum_mode) * {{C_o.LUM_CONTRAST_n}} * 1.0 ) ) * 1%); /* 40/40:10% */
+
+
+
+--c_hue_p: {{C_o.HUE_P_n}};   /* user definable primary */
+--c_sat_hi_4: 94%;   /* 11 point scale */
+--c_sat_hi_2: 72%;
+--c_sat_lo_2: 28%;
+
+
+--textcolor: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_lo_4) /1);
+--bgcolor:   hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_hi_2) /1);
+--bg_lower:  hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_hi_1) /1);
+--highlight: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_lo_2) /1);
+--underline: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_lo_4) /.05);
+}
+
+@media (prefers-color-scheme: dark) {
+* {
+  --lum_mode: -{{C_o.LUM_MODE_n}};
+  --textcolor: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_hi_4) /1);
+  --bgcolor:   hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_lo_2) /1);
+  --bg_lower:  hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_lo_1) /1);
+  --highlight: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_hi_2) /1);
+  --underline: hsla(var(--c_hue_p) var(--c_sat_lo_2) var(--c_lum_hi_4) /.05);
+  }
+}

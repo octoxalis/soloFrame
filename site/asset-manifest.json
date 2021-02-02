@@ -1,0 +1,10 @@
+{
+  "name":"soloFrame",
+  "short_name":"soloFrame",
+  "start_url": "/",
+  "description": "",
+  "icons": [{ "src": "https://soloframe.netlify.app/assets/media/google-touch-icon.png", "sizes": "512x512" }],
+  "theme_color":"#064ec1",
+  "background_color":"#ffffff",
+  "display":"standalone"
+}

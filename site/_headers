@@ -1,0 +1,12 @@
+/*
+Accept-Charset: utf-8
+# Comment out the following line if NOT using Service-Worker-Allowed rule
+Service-Worker-Allowed: /
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Feature-Policy: fullscreen 'self';midi 'self';sync-xhr 'self';microphone 'self';camera 'self';magnetometer 'self';gyroscope 'self';
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1;mode=block
+Timing-Allow-Origin: "https://soloframe.netlify.app/"
+Content-Security-Policy: default-src https://soloframe.netlify.app/ ; base-uri https://soloframe.netlify.app/ ; font-src https://soloframe.netlify.app/ ; connect-src https://soloframe.netlify.app/ ; prefetch-src https://soloframe.netlify.app/ ; img-src https://soloframe.netlify.app/ ; frame-src https://soloframe.netlify.app/ ; frame-ancestors https://soloframe.netlify.app/ ; form-action https://soloframe.netlify.app/ ; manifest-src https://soloframe.netlify.app/ ; script-src-elem https://soloframe.netlify.app/ ; script-src https://soloframe.netlify.app/ ; object-src https://soloframe.netlify.app/ ; style-src https://soloframe.netlify.app/ 'unsafe-inline' 'sha-256-zUgFqwWVEFt/E71r9JasekSZ10Hn6Y4F4+TELNU1Ff8=' 'sha-256-zUgFqwWVEFt/E71r9JasekSZ10Hn6Y4F4+TELNU1Ff8=';
+

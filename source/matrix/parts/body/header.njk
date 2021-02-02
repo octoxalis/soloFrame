@@ -1,0 +1,10 @@
+<header>
+  <h1>
+    <a href="#{{ C_o.SEC_HOME_s }}">{{A_o.NAME_s}}</a>
+  </h1>
+  <nav>
+{%- for _section in section_a %}
+    <a href="#{{_section}}">{{ _section }}</a>
+{%- endfor %}
+  </nav>
+</header>

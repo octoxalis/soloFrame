@@ -1,0 +1,37 @@
+/*=== DISPLAY ===*/
+
+#svg_symbols,
+__                     {display: none}
+
+
+main,
+#initial_logo,
+__                     {display:grid; place-items:center}
+
+
+#initial_hero,
+#initial_discover,
+#background_aside,
+#article_slider,
+__                     {display: flex}
+
+#article::after,
+__                     {display: block}
+
+
+#background_aside,
+__                     {justify-content: center}
+
+
+#initial_hero,
+#initial_discover,
+#article_slider,
+__                     {flex-direction: column}
+
+
+
+/*=== Z-INDEX ===*/
+
+#initial,
+#article_slider,
+__                     {z-index: 1}

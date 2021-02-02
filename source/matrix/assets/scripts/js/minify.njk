@@ -1,0 +1,3 @@
+{% if U_o.dev_b === true %}{{- _js | safe -}}
+{% else %}{{- _js | minify_js | safe -}}
+{% endif %}

@@ -1,0 +1,15 @@
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:ca="http://11tySolo.netlify.app/schemas/ca_schema">
+{%- for _page_o in collections.all %}
+{% if _page_o.data.sitemap_exclude_b !== true %}
+  <url>
+    <loc>{{ U_o.url_s + _page_o.data.permalink }}</loc>
+    <lastmod>{{ _page_o.data.date }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+{% endif %}
+{%- endfor %}
+</urlset>

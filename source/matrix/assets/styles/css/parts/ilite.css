@@ -1,0 +1,67 @@
+* {
+  --c_hi_off: 10;
+  
+/* === FRONT === */
+  --c_ilite_0:   hsla( var(--c_hue_p)               var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_40:  hsla( calc( var(--c_hue_p) + 40 )  var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_60:  hsla( calc( var(--c_hue_p) + 60 )  var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_80:  hsla( calc( var(--c_hue_p) + 80 )  var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_100: hsla( calc( var(--c_hue_p) + 100 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_120: hsla( calc( var(--c_hue_p) + 120 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_160: hsla( calc( var(--c_hue_p) + 160 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_200: hsla( calc( var(--c_hue_p) + 200 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_240: hsla( calc( var(--c_hue_p) + 240 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_280: hsla( calc( var(--c_hue_p) + 280 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_320: hsla( calc( var(--c_hue_p) + 320 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_340: hsla( calc( var(--c_hue_p) + 340 ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /1 );
+  --c_ilite_marker: hsla( calc( var(--c_hue_p) + var(--c_hi_off) ) var(--c_sat_hi_4) {{C_o.LUM_FRONT_s}} /.7 );
+
+/* === BACKGROUND === */
+  --c_ilite_hi:   hsla( var(--c_hue_p)               var(--c_sat_lo_2) {{C_o.LUM_BACK_s}} /.4 );
+  --c_ilite__0:   hsla( var(--c_hue_p)               var(--c_sat_hi_4) {{C_o.LUM_BACK_s}} /.4 );
+  --c_ilite__100: hsla( calc( var(--c_hue_p) + 100 ) var(--c_sat_hi_4) {{C_o.LUM_BACK_s}} /.4 );
+  --c_ilite__180: hsla( calc( var(--c_hue_p) + 180 ) var(--c_sat_hi_4) {{C_o.LUM_BACK_s}} /.4 );
+  --c_ilite__300: hsla( calc( var(--c_hue_p) + 300 ) var(--c_sat_hi_4) {{C_o.LUM_BACK_s}} /.4 );
+}
+
+
+/* === FRONT === */
+.i_dec                 {color:var(--c_ilite_40)}
+.i_op                  {color:var(--c_ilite_120)}
+.i_cont,
+.i_prop                {color:var(--c_ilite_200)}
+.i_punct               {color:var(--c_ilite_240)}
+.i_uv,
+.i_var                 {color:var(--c_ilite_280)}
+.i_res                 {color:var(--c_ilite_340)}
+
+
+
+
+.i_type,  /*: JS */
+.i_unit,  /*: CSS */
+.i_per,   /*: CSS */
+__                     {color:var(--c_ilite_80)}
+.i_loop,  /*: JS */
+__                     {color:var(--c_ilite_160)}
+.i_temp,  /*: JS */
+.i_sel,   /*: CSS */
+.i_CHILD, /*: CSS */
+.i_attr   /* HTML */   {color:var(--c_ilite_0)}
+.i_log,
+.i_reg
+li.i_hi::marker        {color:var(--c_ilite_marker)}
+
+
+/* === BACKGROUND === */
+
+.i_block,
+.i_block_html,
+.i_line                {background:var(--c_ilite_hi); opacity:.33}
+.i_num                 {background:var(--c_ilite__300)}
+.i_apos,
+.i_quot                {background:var(--c_ilite__180)}
+.i_lit,     /*: JS */
+.i_html,    /* NJK */
+.i_href                {background:var(--c_ilite__100)}
+li.i_hi                {background:hsla(calc( var(--c_hue_p) + var(--c_hi_off) ) var(--c_sat_hi_2) {{C_o.LUM_BACK_s}} /.4 )}

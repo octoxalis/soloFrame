@@ -1,0 +1,24 @@
+/* Inline footnotes */
+
+label {
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: .7em;
+  margin-right: .5em;
+}
+
+label:hover {
+  color: var(--highlight);
+}
+
+
+label + input,
+label + input + small {
+  display: none;
+}
+
+input:checked + small {
+  display: block;
+  padding: .8em 0 1em 2.5vw;
+  background: var(--underline);
+}

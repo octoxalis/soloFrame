@@ -1,0 +1,13 @@
+<head>
+{% include "parts/head/title.njk" %}
+{% include "parts/head/seo.njk" %}
+{% include "parts/head/description.njk" %}
+{% include "parts/head/manifest.njk" %}
+{% include "parts/head/base_url.njk" %}
+{% include "parts/head/inline_style.njk" %}
+
+{% for _css in css_a %}
+<link rel="stylesheet" href="assets/styles/css/{{_css}}" />
+{% endfor %}
+
+</head>

@@ -1,0 +1,10 @@
+{% set data_o = D_o.data__o( permalink, collections.all ) %}
+
+{{- '' | template_start( data_o ) -}}{# ante process #}
+
+{%- set _template_s %}
+<?xml version='1.0' encoding='utf-8'?>
+{% include "parts/sitemap.njk" %}
+{% endset -%}
+
+{{- _template_s | safe | minify_html | template_end( data_o ) -}}{# post process #}
