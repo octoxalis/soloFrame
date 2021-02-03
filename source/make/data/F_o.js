@@ -2,6 +2,8 @@
  * Functions
  * Naming scheme: function__s
  */
+const REX_o = require( '../lib/regex.js' )
+
 const A_o = require( './A_o.js' )
 const U_o = require( './U_o.js' )
 const C_o = require( './C_o.js' )
@@ -9,6 +11,8 @@ const C_o = require( './C_o.js' )
 const OPEN_s  = '[='   //: substitute__s function delimiter
 const CLOSE_s = '=]'   //: idem
 
+const SPECIAL_s = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+const NORMAL_s  = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
 
 
 module.exports =
@@ -97,11 +101,74 @@ module.exports =
   },
 
 
-  slotId__s:
+  fileName__s:
   permalink_s =>
   {
     let index_n = permalink_s.lastIndexOf( '/') + 1  //: if ( index_n < 0 ) index_n = 0
     return permalink_s.slice( index_n, permalink_s.indexOf( '.html' ) )  //;console.log( `slot: ${id_s}`)
+  },
+
+
+
+  slug__s:
+  title_s =>
+  {
+    const special_s =
+      SPECIAL_s
+        .split( '' )
+        .join( '|' )
+
+    const g_re =
+      REX_o
+        .new__re( 'g' )
+
+    return (
+      title_s
+        .toString()
+        .toLowerCase()
+        .replace
+        (
+          g_re`\s+`,    //: space --> -
+          '-'
+        )
+        .replace
+        (
+          g_re`${special_s}`,    //: SPECIAL_s altern
+          char_s => (
+            NORMAL_s
+              .charAt
+              (
+                SPECIAL_s
+                  .indexOf( char_s )
+              )
+          )
+        )
+        .replace
+        (
+          g_re`&`,    //: ampersand --> -and-
+          '-and-'
+        )
+        .replace
+        (
+          g_re`[^\w\-]+`,    //: all non-word characters
+          ''                 //: remove
+        )
+        .replace
+        (
+          g_re`\-\-+`,    //: multiple -
+          '-'             //: remove
+        )
+        .replace
+        (
+          g_re`^-+`,    //: trim - at start
+          ''            //: remove
+        )
+        .replace
+        (
+          g_re`-+$`,    //: trim - at end
+          ''            //: remove
+        )
+    )
   },
 
 
@@ -124,3 +191,21 @@ module.exports =
     if ( output_o ) console.log( output_o )    //: null or error message
   }
 }
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+function slugify(string)
+{
+  const p = new RegExp(a.split('').join('|'), 'g')
+  
+  return string.toString().toLowerCase()
+  .replace(/\s+/g, '-') // Replace spaces with -
+  .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+  .replace(/&/g, '-and-') // Replace & with 'and'
+  .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+  .replace(/\-\-+/g, '-') // Replace multiple - with single -
+  .replace(/^-+/, '') // Trim - from start of text
+  .replace(/-+$/, '') // Trim - from end of text
+}
+
+*/

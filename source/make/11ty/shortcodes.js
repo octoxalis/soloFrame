@@ -15,9 +15,13 @@ const CODES_o =
     section_s
   ) =>
   {
+    const sectionSlug_s =
+      F_o
+        .slug__s( section_s )
+
     return (
       //--HTML
-      `<section id="${section_s}"><h2>${section_s}</h2>\n`  //: \n is mandatory
+      `<section id="${section_s}"><h2>${section_s}<a name="${sectionSlug_s}"></a></h2>\n`  //: \n is mandatory
     )
   }
   ,
@@ -34,6 +38,38 @@ const CODES_o =
   }
   ,
 
+
+  anchor__s:    //: create an anchor header
+  (
+    anchor_s
+  ) =>
+  {
+    let at_n = 0
+
+    while
+    (
+      at_n < anchor_s.length
+      &&
+      anchor_s.charAt( at_n ) === '#'
+    )
+    {
+      ++at_n
+    }
+
+    const name_s =
+      anchor_s
+        .slice( at_n )
+
+    const nameSlug_s =
+      F_o
+        .slug__s( name_s )    //;console.log( name_s )
+
+    return (
+      //--HTML
+      `<h${at_n}>${name_s}<a name="${nameSlug_s}"></a></h${at_n}>\n`  //: \n is mandatory
+    )
+  }
+  ,
 
 
   tnote__s:
@@ -56,7 +92,6 @@ const CODES_o =
   ,
 
 
-//@code=01
   code__s:
   (
     path_s    //: 'path/to/file.ext#index_s', index_s empty for full file
@@ -116,7 +151,6 @@ const CODES_o =
       )
   }
 ,
-//@code=01
 
 
 
@@ -181,6 +215,7 @@ module.exports = make_o =>
   [
     'section',
     'end_section',
+    'anchor',
     'code',
   ]
     .forEach

@@ -1,1 +1,0 @@
-var LAB_o=[];LAB_o['web_site_architecture']=[0,1,2,3,5];LAB_o['fondamentals']=[0,1,2,3,5];LAB_o['navigation']=[1];LAB_o['page_composition']=[1];LAB_o['content_composition']=[2,5];LAB_o['user_interface']=[4];LAB_o['user_experience']=[4];

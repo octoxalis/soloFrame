@@ -15,13 +15,11 @@
   section_a: [ 'Links' ],
 
   script_a:
-  [],
+  [
+    
+  ],
   css_a:
   [
-    //-'slideshow.min.css',
-    //-'lightbox.min.css',
-    //-'video.min.css',
-    //-'print.min.css',
   ],
 
 }

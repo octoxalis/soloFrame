@@ -172,7 +172,7 @@ a:not([href*="//"]):hover:after {
 
 /* Internal links */
 
-a:not([href*="//"]):after { 
+a:not([name]):not([href*="//"]):after { 
   content: "\2304"; /* White Right-Pointing Triangle */
 }
 

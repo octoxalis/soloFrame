@@ -24,10 +24,6 @@
   ],
   css_a:
   [
-    //-'slideshow.min.css',
-    //-'lightbox.min.css',
-    //-'video.min.css',
-    //-'print.min.css',
   ],
 
 }
@@ -76,7 +72,8 @@ reproducing the usual appearence of a multi page website, with sections clearly 
 always keeping the maximum simplicity andd flexibility in mind.
 
 
-###  JavaScriptless, CSS classless
+{% anchor "###JavaScriptless, CSS classless" %}
+
 
 HTML5 and CSS alone are so performant in evergreen browsers that an advised developer can fairly rely on these stars
 to deliver a pretty simple but efficient website for an everyday use:
@@ -89,7 +86,7 @@ Hours spared to write content, that's all.
 Nonetheless, if needed, JavaScript scripts or CSS stylesheets can be easily added to {{A_o.NAME_s}} website.
 
 
-###  Sections are all we need
+{% anchor "###Sections are all we need" %}
 
 To keep it simple, {{A_o.NAME_s}} content is fragmented in sections listed at the top of the website page as in a usual Menu.
 The sections number and names are not fixed, they are declared in the Front matter of the page.
@@ -154,7 +151,7 @@ GLOBAL_s   = a longer description for search engines
 ````
 
 
-A prototype `_proto.md` Markdown file is to be found in the `source/matter/_prototype/` directory.
+A [_proto.md][P] Markdown file is to be found in the `source/matter/_prototype/` directory.
 Copy that file inside the `source/matter/content/` directory, eventualy renaming it to `index.md`.
 From this file, Eleventy SSG will generate the `index.html` file of the website.
 
@@ -183,7 +180,7 @@ section_a:                //: website section names
 All other properties are optional and for specific purposes, detailed in the [_extension_ section][1].
 
 
-###  Internal linking
+{% anchor "###Internal linking" %}
 
 It's always useful to be able to provide links within a website page
 {% _tnote %}As at the end of the previous paragraph{% end_tnote %}
@@ -251,7 +248,7 @@ Styles for these components are not loaded by default in the inline `style` tag
 and it is **mandatory** to declare the related stylesheets for sections that need them.
 
 
-###  Colorable
+{% anchor "###Colorable" %}
 
 {{A_o.NAME_s}} provides a very easy way to modifiy a webside colors, apart of its dual light mode
 {% _tnote %}The now usual Light and Dark modes{% end_tnote %}
@@ -281,6 +278,7 @@ Have a look at the [color.css][H] file to understand how this works.
 
 [1]: #{{section_a[3]}}
 [H]: {{U_o.SOLO_SRC_R_s}}matrix/assets/styles/css/parts/color.css
+[P]: {{U_o.SOLO_SRC_R_s}}source/matter/_prototype/_proto.md
 
 {{U_o.NETLIFY_R_s}}
 {{U_o.STRICT_R_s}}

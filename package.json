@@ -19,6 +19,7 @@
     "node-fetch": "^2.6.1",
     "npx": "^10.2.2",
     "nunjucks": "^3.2.2",
+    "performance-leaderboard": "^3.3.0",
     "terser": "^5.5.1"
   },
   "devDependencies": {

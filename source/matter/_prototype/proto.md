@@ -16,25 +16,26 @@
     'Introduction',
     'Article',
     'Pictures',
-    'Video'
+    //...
   ],
 
   script_a:
   [
-    'code.min.js',  //: uncomment to use ilite interactively
+    //-'code.min.js',  //: uncomment to use ilite interactively
   ],
   css_a:
   [
+    //-'code.min.css',       //: uncomment to use ilite interactively
     //-'slideshow.min.css',  //: uncomment to use slideshow
     //-'lightbox.min.css',   //: uncomment to use lightbox
-    'video.min.css',       //: uncomment to use video
+    //-'video.min.css',      //: uncomment to use video
     //-'print.min.css',      //: uncomment to use print
   ],
 }
 ---
 
 [comment]: # (======================== Introduction ========================)
-{% _section section_a[0] %}
+{% section section_a[0] %}
 
 {% end_section %}
 
@@ -43,7 +44,7 @@
 
 [comment]: # (======================== Article ========================)
 
-{% _section section_a[1] %}
+{% section section_a[1] %}
 
 {% end_section %}
 
@@ -52,7 +53,7 @@
 
 [comment]: # (======================== Pictures ========================)
 
-{% _section section_a[2] %}
+{% section section_a[2] %}
 
 {% end_section %}
 
@@ -61,7 +62,7 @@
 
 [comment]: # (======================== Video ========================)
 
-{% _section section_a[3] %}
+{% section section_a[3] %}
 
 {% end_section %}
 
